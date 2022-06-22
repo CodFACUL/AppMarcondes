@@ -19,7 +19,7 @@ import {
 
 function Home({navigation}) {
     const [produtos, setProdutos] = useState<ProdutoData[]>([])
-    
+
     const loadProdutos = async () => {
         const response = await api.get('produto')
         setProdutos(response.data)
